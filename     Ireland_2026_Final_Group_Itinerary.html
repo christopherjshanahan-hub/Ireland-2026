@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FINAL • Ireland Trip | Nov 2–6</title>
+<style>
+:root{
+  --green:#184d3b;
+  --green2:#2f6b52;
+  --cream:#f6f2e8;
+  --gold:#c9a55b;
+  --ink:#1f2a27;
+  --muted:#66736d;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+}
+.hero{
+  padding:28px 20px 24px;
+  background:linear-gradient(145deg,var(--green),var(--green2));
+  color:white;
+}
+.hero .eyebrow{
+  font-size:13px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  opacity:.85;
+}
+.hero h1{
+  margin:8px 0 6px;
+  font-size:32px;
+  line-height:1.05;
+}
+.hero p{
+  margin:0;
+  opacity:.9;
+  font-size:15px;
+}
+.route{
+  margin-top:18px;
+  background:rgba(255,255,255,.12);
+  padding:12px 14px;
+  border-radius:14px;
+  font-size:14px;
+}
+.wrap{
+  max-width:760px;
+  margin:0 auto;
+  padding:18px 14px 44px;
+}
+.nav{
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  padding-bottom:6px;
+  margin-bottom:14px;
+}
+.nav button{
+  border:0;
+  background:white;
+  color:var(--green);
+  border-radius:999px;
+  padding:10px 14px;
+  font-weight:700;
+  box-shadow:0 2px 10px rgba(0,0,0,.06);
+  white-space:nowrap;
+}
+.day{
+  background:var(--card);
+  border-radius:18px;
+  padding:18px;
+  margin:14px 0;
+  box-shadow:0 5px 20px rgba(25,55,45,.08);
+  border:1px solid rgba(24,77,59,.07);
+}
+.daytop{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  align-items:flex-start;
+}
+.date{
+  color:var(--green);
+  font-weight:800;
+  font-size:15px;
+}
+.day h2{
+  margin:4px 0 4px;
+  font-size:22px;
+}
+.stay{
+  font-size:13px;
+  color:var(--muted);
+}
+.badge{
+  background:#edf5f1;
+  color:var(--green);
+  border-radius:999px;
+  padding:7px 10px;
+  font-size:12px;
+  font-weight:700;
+  white-space:nowrap;
+}
+.timeline{
+  margin-top:16px;
+  border-left:2px solid #d9e5df;
+  padding-left:16px;
+}
+.stop{
+  position:relative;
+  margin:0 0 16px;
+}
+.stop:before{
+  content:"";
+  position:absolute;
+  left:-22px;
+  top:5px;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:var(--gold);
+  border:2px solid white;
+  box-shadow:0 0 0 1px var(--gold);
+}
+.stop strong{
+  display:block;
+  font-size:15px;
+}
+.tour-cost{display:inline-block;margin-top:7px;padding:5px 9px;border-radius:999px;background:#eef7ee;color:#365b3a;font-size:12px;font-weight:700;}
+.hotel-cost{display:inline-block;margin-top:7px;padding:5px 9px;border-radius:999px;background:#eef3f7;color:#334e68;font-size:12px;font-weight:700;}
+.drive-time{display:inline-block;margin-top:7px;padding:5px 9px;border-radius:999px;background:#f4efe3;color:#765d2b;font-size:12px;font-weight:700;}
+.stop p{
+  margin:4px 0 0;
+  color:#4f5b56;
+  line-height:1.45;
+  font-size:14px;
+}
+.actions{
+  display:flex;
+  gap:8px;
+  margin-top:10px;
+  flex-wrap:wrap;
+}
+.actions a{
+  text-decoration:none;
+  font-size:13px;
+  font-weight:700;
+  color:var(--green);
+  background:#eef5f1;
+  padding:8px 10px;
+  border-radius:10px;
+}
+.panel{
+  background:#fffaf0;
+  border:1px solid #ead9b7;
+  border-radius:16px;
+  padding:16px;
+  margin:18px 0;
+}
+.panel h3{margin:0 0 8px;font-size:17px}
+.panel p{margin:0;color:#5b5a50;font-size:14px;line-height:1.45}
+.footer{
+  text-align:center;
+  color:var(--muted);
+  font-size:12px;
+  padding-top:8px;
+}
+@media (min-width:700px){
+  .hero{padding:38px 24px 32px}
+  .hero h1{font-size:40px}
+  .wrap{padding:24px 18px 60px}
+}
+</style>
+<script>
+function goTo(id){
+  document.getElementById(id).scrollIntoView({behavior:'smooth', block:'start'});
+}
+</script>
+</head>
+<body>
+  <div class="hero">
+    <div style="max-width:760px;margin:auto;">
+      <div class="eyebrow">Ireland • October 30–November 7</div>
+      <h1>Dublin → Galway → Killarney → Dublin</h1>
+      <p>United flights from Newark plus a five-day road trip through the west and southwest of Ireland.</p>
+      <div class="route">Dublin ✈︎ → Clonmacnoise → Galway → Cliffs of Moher → Doolin → Shannon Ferry → Killarney → Gap of Dunloe → Dingle → Adare → Rock of Cashel → Dublin</div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="nav">
+      <button onclick="goTo('oct30')">Oct 30</button>
+      <button onclick="goTo('oct31')">Oct 31</button>
+      <button onclick="goTo('nov1')">Nov 1</button>
+      <button onclick="goTo('nov2')">Nov 2</button>
+      <button onclick="goTo('nov3')">Nov 3</button>
+      <button onclick="goTo('nov4')">Nov 4</button>
+      <button onclick="goTo('nov5')">Nov 5</button>
+      <button onclick="goTo('nov6')">Nov 6</button>
+      <button onclick="goTo('nov7')">Nov 7</button>
+    </div>
+
+    <div class="panel"><h3>FINAL GROUP ITINERARY</h3><p>Dublin • Clifden • Killarney • Dingle • October 30–November 7, 2026</p></div>
+
+    <div class="panel"><h3>Tour & attraction cost guide</h3><p>Admission estimates are shown beside planned attractions where a published price is available. Group totals assume 6 adults. Prices are current planning figures and may change before the trip; meals, drinks, private-driver fees and optional purchases are not included.</p></div>
+
+    <div class="panel"><h3>Hotel cost guide</h3><p>Nightly hotel prices below are planning estimates per room based on currently published rates and typical November pricing. Rates can change by room type, package, taxes and availability. Group totals assume 3 rooms for 3 couples.</p><span class="tour-cost">🎟 €8/person • 6 adults: €48</span></div>
+
+    <div class="panel">
+      <h3>Trip at a glance</h3>
+      <p>Fly United UA22 from Newark to Dublin on Friday, October 30 at 9:05 PM. Spend October 31 and November 1 exploring Dublin, then travel west through Galway, the Cliffs of Moher, Killarney and Dingle before returning to Dublin. Fly United UA23 home on Saturday, November 7 at 9:30 AM.</p>
+    </div>
+
+    <section class="day" id="oct30">
+      <div class="daytop"><div><div class="date">FRIDAY • OCTOBER 30</div><h2>United UA22: Newark to Dublin</h2><div class="stay">Overnight flight to Ireland</div></div><div class="badge">Flight</div></div>
+      <div class="timeline">
+        <div class="stop"><strong>Depart Newark (EWR) • 9:05 PM</strong><p>United flight UA22 from Newark Liberty International Airport to Dublin Airport.</p></div>
+        <div class="stop"><strong>Arrive in Dublin (DUB) • 7:30 AM</strong><p>Land in Dublin on Saturday, October 31 after the overnight United UA22 flight from Newark.</p></div>
+      </div>
+    </section>
+
+    <section class="day" id="oct31">
+      <div class="daytop">
+        <div>
+          <div class="date">SATURDAY • OCTOBER 31</div>
+          <h2>Arrival & Dublin</h2>
+          <div class="stay">Overnight: Dublin</div>
+        </div>
+        <div class="badge">Easy First Day</div>
+      </div>
+      <div class="timeline">
+        <div class="stop"><strong>7:30 AM • Arrive in Dublin</strong><p>Land at Dublin Airport after the overnight United UA22 flight from Newark. Head to The Grafton Hotel, drop the bags, have breakfast and get settled before sightseeing.</p><span class="drive-time">🚐 Dublin Airport → Grafton Hotel: ~25 min</span></div><div class="stop"><strong>Check in • The Grafton Hotel</strong><p>Dublin home base for two nights, checking in October 31 and checking out November 2.</p><span class="hotel-cost">Approx. $300–$380 per room/night • 2 nights: $600–$760 per room • 3 rooms: $1,800–$2,280 total</span><div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=The+Grafton+Hotel+Dublin">Open in Maps</a></div></div>
+        <div class="stop"><strong>10:30 AM • Trinity College & Book of Kells</strong><p>Explore Trinity College and the Book of Kells experience.</p><span class="tour-cost">🎟 From €26/person • 6 adults: from €156</span><div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=Trinity+College+Dublin">Open in Maps</a></div></div>
+        <div class="stop"><strong>12:00 PM • Grafton Street & St. Stephen's Green</strong><p>Walk through central Dublin, browse Grafton Street and enjoy St. Stephen's Green.</p><div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=St+Stephens+Green+Dublin">Open in Maps</a></div></div>
+        <div class="stop"><strong>1:00 PM • Casual Lunch</strong><p>Keep lunch relaxed and flexible after the overnight flight.</p></div>
+        <div class="stop"><strong>2:30 PM • Jameson Distillery Bow St.</strong><p>Tour and tasting at the historic Jameson Distillery in Smithfield.</p><span class="tour-cost">🎟 Jameson Experience from €26/person • 6 adults: from €156</span><div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=Jameson+Distillery+Bow+Street+Dublin">Open in Maps</a></div></div>
+        <div class="stop"><strong>4:00 PM • Sightseeing Done / Hotel Break</strong><p>Return to the hotel for a couple of hours to relax and recharge.</p></div>
+        <div class="stop"><strong>7:30 PM • Dinner at The Winding Stair</strong><p>Enjoy an Irish-focused dinner overlooking the River Liffey and Ha&#39;penny Bridge.</p><div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=The+Winding+Stair+Dublin">Open in Maps</a></div></div>
+        <div class="stop"><strong>9:30 PM • Pubs & Live Music</strong><p>Explore Dublin's pub scene and take a walk through the Temple Bar area.</p><div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=Temple+Bar+Dublin">Open in Maps</a></div></div>
+      </div>
+    </section>
+
+    <section class="day" id="nov1">
+      <div class="daytop">
+        <div>
+          <div class="date">SUNDAY • NOVEMBER 1</div>
+          <h2>Full Day in Dublin</h2>
+          <div class="stay">Overnight: Dublin</div>
+        </div>
+        <div class="badge">Sightseeing</div>
+      </div>
+      <div class="timeline">
+        <div class="stop"><strong>9:00 AM • Dublin Castle</strong><p>Begin the day exploring Dublin Castle and its historic surroundings.</p><span class="tour-cost">🎟 Self-guided €8/person; guided €12/person • 6 adults: €48–€72</span><div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=Dublin+Castle+Ireland">Open in Maps</a></div></div>
+        <div class="stop"><strong>10:15 AM • Christ Church Cathedral</strong><p>Visit one of Dublin's great medieval landmarks.</p><span class="tour-cost">🎟 Approx. €12/person at the door • 6 adults: approx. €72</span><div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=Christ+Church+Cathedral+Dublin">Open in Maps</a></div></div>
+        <div class="stop"><strong>11:15 AM • St. Patrick's Cathedral</strong><p>Continue to Ireland's national cathedral.</p><div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=St+Patricks+Cathedral+Dublin">Open in Maps</a></div></div>
+        <div class="stop"><strong>12:15 PM • Lunch</strong><p>Break for lunch before the afternoon's main attraction.</p></div>
+        <div class="stop"><strong>1:30 PM • Guinness Storehouse</strong><p>Tour the Guinness Storehouse and finish with a Guinness and views over Dublin from the Gravity Bar.</p><span class="tour-cost">🎟 Standard experience from €22/person • 6 adults: from €132</span><div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=Guinness+Storehouse+Dublin">Open in Maps</a></div></div>
+        <div class="stop"><strong>3:45 PM • Sightseeing Done / Hotel & Free Time</strong><p>Return to the hotel and relax before a lively Sunday night out.</p></div>
+        <div class="stop"><strong>5:30–6:00 PM • Fade Street Social Rooftop</strong><p>Start with cocktails on the rooftop and catch the beginning of the Sunday live music.</p><div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=Fade+Street+Social+Dublin">Open in Maps</a></div></div>
+        <div class="stop"><strong>6:30 PM • Dinner at Fade Street Social</strong><p>Dinner in the main restaurant. The earlier reservation leaves time to enjoy the live music before and after dinner.</p></div>
+        <div class="stop"><strong>8:00 PM • Rooftop Cocktails & Live Music</strong><p>Head back upstairs for cocktails and the final hour of Sunday rooftop live music.</p></div>
+        <div class="stop"><strong>9:00 PM onward • Dublin Pubs & Bars</strong><p>Keep the night going at a lively Dublin pub or bar after the music ends.</p></div>
+      </div>
+    </section>
+
+    <section class="day" id="nov2">
+      <div class="daytop">
+        <div>
+          <div class="date">MONDAY • NOVEMBER 2</div>
+          <h2>Dublin → Clonmacnoise → Galway → Clifden</h2>
+          <div class="stay">Overnight: Abbeyglen Castle Hotel, Clifden<br><span class="hotel-cost">Approx. €230–€320 per room/night • 3 rooms: €690–€960/night</span></div>
+        </div>
+        <div class="badge">Westbound</div>
+      </div>
+      <div class="timeline">
+        <div class="stop">
+          <strong>8:00 AM • Check out / Driver pickup • The Grafton Hotel</strong>
+          <p>Check out on the morning of November 2. Your private driver will pick the group up at The Grafton Hotel and begin the journey west toward Galway.</p>
+        </div>
+        <div class="stop">
+          <strong>9:45 AM • Clonmacnoise</strong>
+          <p>Visit one of Ireland’s most important early monastic settlements, set along the River Shannon.</p><span class="drive-time">🚐 Grafton Hotel → Clonmacnoise: ~1 hr 40 min</span>
+          <div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=Clonmacnoise+Ireland">Open in Maps</a></div>
+        </div>
+        <div class="stop">
+          <strong>12:15 PM • Galway City</strong>
+          <p>Arrive in Galway for lunch and a walk around the city. Enjoy the lively streets and pubs before continuing west.</p><span class="drive-time">🚐 Clonmacnoise → Galway: ~1 hr</span>
+        </div>
+        <div class="stop">
+          <strong>2:30 PM • Depart Galway for Clifden</strong>
+          <p>Continue west through Connemara toward Abbeyglen Castle Hotel.</p><span class="drive-time">🚐 Galway → Abbeyglen Castle: ~1 hr 30 min</span>
+        </div>
+        <div class="stop">
+          <strong>4:00 PM • Check in at Abbeyglen Castle Hotel</strong>
+          <p>Arrive before dark, settle into the castle and get ready for a fun evening at the hotel.</p><div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=Abbeyglen+Castle+Hotel+Clifden+Ireland">Open in Maps</a></div>
+        </div>
+        <div class="stop">
+          <strong>6:30 PM • Champagne Reception & Storytelling</strong>
+          <p>Join Abbeyglen’s pre-dinner reception and storytelling experience.</p>
+        </div>
+        <div class="stop">
+          <strong>7:30 PM • Dinner at Abbeyglen</strong>
+          <p>Have dinner at the castle, followed by drinks, piano music and a lively evening in the Castle Pub.</p>
+        </div>
+        <div class="stop">
+          <strong>After Dinner • Piano Bar & Castle Pub</strong>
+          <p>Stay at the castle for music, drinks and a fun group night.</p>
+          <div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=Galway+Ireland">Open in Maps</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="day" id="nov3">
+      <div class="daytop">
+        <div>
+          <div class="date">TUESDAY • NOVEMBER 3</div>
+          <h2>Galway to Killarney</h2>
+          <div class="stay">Overnight: The Ross, Killarney<br><span class="hotel-cost">Approx. $220–$325 per room/night • 3 rooms: $660–$975/night</span></div>
+        </div>
+        <div class="badge">Cliffs + Ferry</div>
+      </div>
+      <div class="timeline">
+        <div class="stop">
+          <strong>8:30 AM • Depart Abbeyglen Castle</strong>
+          <p>Travel south into County Clare and the Burren.</p>
+        </div>
+        <div class="stop">
+          <strong>10:30 AM • Cliffs of Moher</strong>
+          <p>Spend the morning exploring the cliffs and surrounding Atlantic scenery.</p><span class="drive-time">🚐 Abbeyglen Castle → Cliffs of Moher: ~2 hrs</span>
+          <div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=Cliffs+of+Moher+Ireland">Open in Maps</a></div>
+        </div>
+        <div class="stop">
+          <strong>12:30 PM • Doolin / Lunch</strong>
+          <p>Optional lunch stop in the village of Doolin.</p><span class="drive-time">🚐 Cliffs of Moher → Doolin: ~15 min</span>
+          <div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=Doolin+Ireland">Open in Maps</a></div>
+        </div>
+        <div class="stop">
+          <strong>2:30 PM • Killimer → Tarbert Ferry</strong>
+          <p>Cross the Shannon Estuary by car ferry into County Kerry.</p><span class="drive-time">🚐 Doolin → Killimer: ~1 hr 10 min • ⛴ Ferry: ~20 min</span>
+          <div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=Killimer+Ferry+Terminal+Ireland">Open in Maps</a></div>
+        </div>
+        <div class="stop">
+          <strong>4:30 PM • Arrive in Killarney / Check in at The Ross</strong>
+          <p>Check in at The Ross and settle in. The Ross is your Killarney base for Tuesday, Wednesday and Thursday nights, with pubs, restaurants and live music within easy walking distance.</p><div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=The+Ross+Hotel+Killarney+Ireland">Open in Maps</a></div><span class="drive-time">🚐 Tarbert → Killarney: ~1 hr 15 min</span>
+          <div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=Killarney+Ireland">Open in Maps</a></div>
+        </div>
+        <div class="stop">
+          <strong>4:00–5:30 PM • Settle in & First Drink at The Ross</strong>
+          <p>Relax after the drive, get cleaned up and kick off the first Killarney night with a drink at the hotel.</p>
+        </div>
+        <div class="stop">
+          <strong>6:00 PM • Dinner at The Laurels</strong>
+          <p>Walk to this classic family-run Killarney pub for Irish food, Guinness and a lively traditional atmosphere.</p><div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=The+Laurels+Pub+Killarney+Ireland">Open in Maps</a></div>
+        </div>
+        <div class="stop">
+          <strong>8:00 PM • O'Connors Traditional Pub</strong>
+          <p>Head to a smaller traditional pub for pints and, when scheduled, live Irish music.</p><div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=OConnors+Traditional+Pub+Killarney+Ireland">Open in Maps</a></div>
+        </div>
+        <div class="stop">
+          <strong>9:30 PM • J.M. Reidy's</strong>
+          <p>Move on to one of Killarney’s liveliest group spots for drinks, music and a more energetic atmosphere.</p><div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=JM+Reidys+Killarney+Ireland">Open in Maps</a></div>
+        </div>
+        <div class="stop">
+          <strong>11:00 PM onward • The Killarney Grand</strong>
+          <p>If the group is still going, finish the night with late-night music, drinks and entertainment.</p><div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=The+Killarney+Grand+Ireland">Open in Maps</a></div>
+        </div>
+<div class="stay">Overnight: The Ross, Killarney<br><span class="hotel-cost">Approx. $220–$325 per room/night • 3 rooms: $660–$975/night</span></div>
+        </div>
+        <div class="badge">Local Day</div>
+      </div>
+        </div>
+    </section>
+
+    <section class="day" id="nov4">
+      <div class="daytop">
+        <div>
+          <div class="date">WEDNESDAY • NOVEMBER 4</div>
+          <h2>Killarney & Gap of Dunloe</h2>
+              <div class="timeline">
+        <div class="stop">
+          <strong>9:00 AM • Torc Waterfall</strong>
+          <p>Start the day with one of Killarney National Park’s signature stops.</p><span class="tour-cost">🎟 Free</span><span class="drive-time">🚐 Killarney → Torc Waterfall: ~15 min</span>
+          <div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=Torc+Waterfall+Ireland">Open in Maps</a></div>
+        </div>
+        <div class="stop">
+          <strong>10:00 AM • Muckross House</strong>
+          <p>Explore the historic estate and surrounding gardens.</p><span class="tour-cost">🎟 €9/person • 6 adults: €54 • National Park & Muckross Gardens are free</span><span class="drive-time">🚐 Torc Waterfall → Muckross House: ~5 min</span>
+          <div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=Muckross+House+Ireland">Open in Maps</a></div>
+        </div>
+        <div class="stop">
+          <strong>11:30 AM • Killarney National Park</strong>
+          <p>Allow time to enjoy the park and its lakes, woodland and mountain scenery.</p>
+        </div>
+        <div class="stop">
+          <strong>1:15 PM • Gap of Dunloe</strong>
+          <p>Weather permitting, take a traditional horse-and-buggy ride through the Gap of Dunloe.</p><span class="drive-time">🚐 Killarney → Gap of Dunloe: ~20–25 min</span>
+          <div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=Gap+of+Dunloe+Ireland">Open in Maps</a></div>
+        </div>
+        <div class="stop">
+          <strong>4:15 PM • Sightseeing Done / Evening in Killarney</strong>
+          <p>Free evening for dinner, pubs and exploring the town.</p>
+        </div>
+        <div class="stop">
+          <strong>5:00–6:00 PM • Relax at The Ross</strong>
+          <p>Freshen up after the Gap of Dunloe day and have a drink before heading out.</p>
+        </div>
+        <div class="stop">
+          <strong>6:30 PM • Dinner at Bricín</strong>
+          <p>Enjoy a distinctly Irish dinner at Bricín Restaurant and Boxty House.</p><div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=Bricin+Restaurant+Killarney+Ireland">Open in Maps</a></div>
+        </div>
+        <div class="stop">
+          <strong>8:30 PM • Courtney's Bar • Whiskey & Trad Music</strong>
+          <p>Head to Courtney's for Irish whiskey and traditional music. A tutored whiskey tasting for the six-person group would be a great addition if available.</p><div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=Courtneys+Bar+Killarney+Ireland">Open in Maps</a></div>
+        </div>
+        <div class="stop">
+          <strong>10:00 PM • Dunloe Lodge</strong>
+          <p>Continue with another pint and live music, then keep the rest of the night flexible.</p><div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=Dunloe+Lodge+Killarney+Ireland">Open in Maps</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="day" id="nov5">
+      <div class="daytop">
+        <div>
+          <div class="date">THURSDAY • NOVEMBER 5</div>
+          <h2>Dingle Peninsula</h2>
+          <div class="stay">Overnight: The Ross, Killarney<br><span class="hotel-cost">Approx. $220–$325 per room/night • 3 rooms: $660–$975/night</span></div>
+        </div>
+        <div class="badge">Scenic Drive</div>
+      </div>
+      <div class="timeline">
+        <div class="stop">
+          <strong>9:00 AM • Depart Killarney for Dingle</strong>
+          <p>Drive west from Killarney for a full day exploring one of Ireland’s most scenic peninsulas.</p><span class="drive-time">🚐 Killarney → Dingle: ~1 hr 10–15 min</span>
+        </div>
+        <div class="stop">
+          <strong>10:30 AM • Slea Head Drive</strong>
+          <p>Tour the dramatic Atlantic coastline and see archaeological sites scattered throughout the peninsula.</p><span class="drive-time">🚐 Slea Head loop: ~1 hr driving • allow 2.5–3 hrs with stops</span>
+          <div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=Slea+Head+Drive+Ireland">Open in Maps</a></div>
+        </div>
+        <div class="stop">
+          <strong>1:00 PM • Dingle Town / Lunch & Pubs</strong>
+          <p>Enjoy lunch, shops and pubs, then depart Dingle around 3:00 PM so the scenic portion of the day is complete before 4:30 PM. Return to Killarney after dark if necessary.</p><span class="drive-time">🚐 Dingle → Killarney: ~1 hr 10–15 min</span>
+          <div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=Dingle+Ireland">Open in Maps</a></div>
+        </div>
+        <div class="stop">
+          <strong>5:00–6:30 PM • Relax & Drinks at The Ross</strong>
+          <p>Return from Dingle, freshen up and get ready for the final big Killarney night.</p>
+        </div>
+        <div class="stop">
+          <strong>7:00 PM • Dinner at Hilliard's</strong>
+          <p>Have dinner in a stylish, social setting with cocktails before heading into the pubs.</p><div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=Hilliards+Killarney+Ireland">Open in Maps</a></div>
+        </div>
+        <div class="stop">
+          <strong>9:00 PM • Murphy's Bar</strong>
+          <p>Head to Murphy's for pints and live traditional Irish music.</p><div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=Murphys+Bar+Killarney+Ireland">Open in Maps</a></div>
+        </div>
+        <div class="stop">
+          <strong>10:30 PM onward • The Killarney Grand</strong>
+          <p>Finish the Killarney stay with a big final night of music, drinks and late-night entertainment.</p><div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=The+Killarney+Grand+Ireland">Open in Maps</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="day" id="nov6">
+      <div class="daytop">
+        <div>
+          <div class="date">FRIDAY • NOVEMBER 6</div>
+          <h2>Killarney to Dublin</h2>
+          <div class="stay">Overnight: The Grafton Hotel, Dublin<br><span class="hotel-cost">Approx. $300–$380 per room/night • 3 rooms: $900–$1,140/night</span></div>
+        </div>
+        <div class="badge">Return East</div>
+      </div>
+      <div class="timeline">
+        <div class="stop">
+          <strong>9:00 AM • Check out of The Ross / Depart Killarney</strong>
+          <p>Begin the drive back toward Dublin.</p>
+        </div>
+        <div class="stop">
+          <strong>10:05 AM • Adare</strong>
+          <p>Visit the picturesque village known for its famous row of thatched cottages.</p><span class="drive-time">🚐 Killarney → Adare: ~1 hr 5 min</span>
+          <div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=Adare+Ireland">Open in Maps</a></div>
+        </div>
+        <div class="stop">
+          <strong>12:30 PM • Rock of Cashel</strong>
+          <p>Optional stop at one of Ireland’s most striking historic sites before continuing east.</p><span class="drive-time">🚐 Adare → Rock of Cashel: ~1 hr 10 min</span>
+          <div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=Rock+of+Cashel+Ireland">Open in Maps</a></div>
+        </div>
+        <div class="stop">
+          <strong>4:00 PM • Arrive in Dublin</strong>
+          <p>Arrive back in Dublin with the day's sightseeing complete before 4:30 PM.</p><span class="drive-time">🚐 Rock of Cashel → Dublin: ~2 hrs</span>
+        </div>
+        <div class="stop">
+          <strong>4:15 PM • Check in • The Grafton Hotel</strong>
+          <p>Check back into The Grafton Hotel for Friday night. Relax, freshen up and get ready for the final night out in Dublin.</p>
+          <div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=The+Grafton+Hotel+Dublin">Open in Maps</a></div>
+        </div>
+        <div class="stop">
+          <strong>6:30 PM • Dinner at Chai-Yo</strong>
+          <p>Kick off the final night with a lively teppanyaki-style dinner where the chefs cook at the table. A fun, interactive choice for the six-person group.</p><div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=Chai+Yo+Dublin+Ireland">Open in Maps</a></div>
+        </div>
+        <div class="stop">
+          <strong>8:30 PM • O'Donoghue's</strong>
+          <p>Head to one of Dublin’s legendary traditional music pubs for pints and Irish music.</p><div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=ODonoghues+Bar+Dublin+Ireland">Open in Maps</a></div>
+        </div>
+        <div class="stop">
+          <strong>10:00 PM • The Cobblestone</strong>
+          <p>Continue to one of Dublin’s best-known spots for authentic traditional Irish music sessions and a lively Friday-night atmosphere.</p><div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=The+Cobblestone+Dublin+Ireland">Open in Maps</a></div>
+        </div>
+        <div class="stop">
+          <strong>11:30 PM onward • Whelan's (Optional)</strong>
+          <p>If the group still has energy, finish the Ireland trip with live music and a late night at Whelan’s. Keep in mind the early departure for the 9:30 AM flight to Newark on Saturday.</p><div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=Whelans+Dublin+Ireland">Open in Maps</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="day" id="nov7">
+      <div class="daytop"><div><div class="date">SATURDAY • NOVEMBER 7</div><h2>United UA23: Dublin to Newark</h2><div class="stay">Return home</div></div><div class="badge">Flight</div></div>
+      <div class="timeline">
+        <div class="stop"><strong>Depart Dublin (DUB) • 9:30 AM</strong><p>United flight UA23 from Dublin Airport to Newark Liberty International Airport.</p></div>
+        <div class="stop"><strong>Arrive in Newark (EWR) • 11:55 AM</strong><p>United UA23 arrives at Newark Liberty International Airport at 11:55 AM.</p></div>
+      </div>
+    </section>
+
+    <div class="panel">
+      <h3>Next additions</h3>
+      <p>Hotels, flight details, dinner reservations, confirmation numbers, exact pickup times, ferry timing, driver details and a shared group notes section can all be added to this same app.</p>
+    </div>
+
+    <div class="footer">Ireland Trip • October 30–November 7</div>
+  </div>
+</body>
+</html>
